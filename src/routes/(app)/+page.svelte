@@ -5,6 +5,8 @@
 	import FaqSection from '$components/sections/FaqSection.svelte';
 	import Seo from '$components/app/Seo.svelte';
 	import AboutSection from '$components/sections/AboutSection.svelte';
+	import DoctorSection from '$components/sections/DoctorSection.svelte';
+	import BlogSection from '$components/sections/BlogSection.svelte';
 
 	let { data } = $props();
 </script>
@@ -20,6 +22,8 @@
 <main>
 	<HeroSection />
 	<AboutSection />
-	<ServiceSection/>
-	<FaqSection />
+	<ServiceSection />
+	<DoctorSection />
+	<BlogSection />
+	<!-- <FaqSection /> -->
 </main>

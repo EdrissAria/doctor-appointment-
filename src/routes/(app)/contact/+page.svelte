@@ -1,101 +1,131 @@
-<script lang="ts">
-	import Grid from '$components/app/Grid.svelte';
-	import PageHeader from '$components/app/PageHeader.svelte';
-	import PageSection from '$components/app/PageSection.svelte';
-	import Seo from '$components/app/Seo.svelte';
-	import Icon from '$components/core/Icon.svelte';
-	import Text from '$components/core/Text.svelte';
-
-</script>
-
-<Seo 
-  title="Contact Us - Veltify Software Development Team" 
-  metaDescription="Get in touch with the Veltify team for inquiries, collaborations, or project discussions. We're here to help bring your ideas to life!" 
-/>
-
-<PageSection container>
-	<PageHeader titleKey="contact_title" descriptionKey="contact_description" />
-
-	<Grid md="2">
-		<form class="space-y-4 rounded-lg border border-base-300 bg-base-200 p-6" method="POST">
-			<div>
-				<label for="name" class="block text-start text-sm font-medium text-content">Name</label>
-				<input
-					type="text"
-					id="name"
-					name="name"
-					class="mt-1 w-full rounded-lg border border-base-300 bg-base-100 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-base"
-					placeholder="Your Name"
-					required
-				/>
-			</div>
-
-			<div>
-				<label for="email" class="block text-start text-sm font-medium text-content">Email</label>
-				<input
-					type="email"
-					id="email"
-					name="email"
-					class="mt-1 w-full rounded-lg border border-base-300 bg-base-100 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-base"
-					placeholder="Your Email"
-					required
-				/>
-			</div>
-
-			<div>
-				<label for="message" class="block text-start text-sm font-medium text-content">
-					Message
-				</label>
-				<textarea
-					id="message"
-					name="message"
-					class="mt-1 h-32 w-full resize-none rounded-lg border border-base-300 bg-base-100 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-base"
-					placeholder="Your Message"
-					required
-				></textarea>
-			</div>
-
-			<button
-				type="submit"
-				class="w-full rounded-lg bg-primary py-3 font-semibold text-primary-content transition duration-200 hover:bg-primary-hover"
-			>
-				Send Message
-			</button>
+<section class="bg-white py-16">
+	<div class="container mx-auto flex flex-col md:flex-row items-center px-6">
+	  <!-- Contact Form Section -->
+	  <div class="md:w-1/2 mt-8 md:mt-0 md:pl-12">
+		<h2 class="text-3xl md:text-4xl font-bold mb-4">Get in Touch</h2>
+		<p class="text-gray-600 mb-6">
+		  Have any questions? Feel free to reach out to us using the form below. We're here to help!
+		</p>
+		
+		<form action="#" method="POST" class="space-y-6">
+		  <!-- Name Input -->
+		  <div class="flex flex-col">
+			<label for="name" class="text-gray-800 font-semibold mb-2">Full Name</label>
+			<input
+			  type="text"
+			  id="name"
+			  name="name"
+			  required
+			  class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-700"
+			/>
+		  </div>
+		  
+		  <!-- Email Input -->
+		  <div class="flex flex-col">
+			<label for="email" class="text-gray-800 font-semibold mb-2">Email Address</label>
+			<input
+			  type="email"
+			  id="email"
+			  name="email"
+			  required
+			  class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-700"
+			/>
+		  </div>
+  
+		  <!-- Message Input -->
+		  <div class="flex flex-col">
+			<label for="message" class="text-gray-800 font-semibold mb-2">Your Message</label>
+			<textarea
+			  id="message"
+			  name="message"
+			  required
+			  rows="5"
+			  class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-700"
+			></textarea>
+		  </div>
+  
+		  <!-- Submit Button -->
+		  <button
+			type="submit"
+			class="bg-teal-700 text-white py-3 px-6 rounded-lg font-semibold hover:bg-teal-800 transition"
+		  >
+			Send Message
+		  </button>
 		</form>
-
-		<div class="mx-6 flex flex-col items-center justify-center text-center">
-			<h2 class="mb-6 text-2xl font-semibold text-primary-base">
-				<Text key="contact_follow_title" />
-			</h2>
-			<p class="mb-8 max-w-xs text-muted">
-				<Text key="contact_follow_description" />
-			</p>
-			<div class="flex gap-4">
-				<a
-					href="https://facebook.com"
-					target="_blank"
-					aria-label="facebook link"
-					class="flex h-14 w-14 items-center justify-center rounded-full bg-primary-base text-lg text-primary-content transition hover:bg-primary-base/80"
-				>
-					<Icon class="!text-2xl" name="facebook" />
-				</a>
-				<a
-					href="https://twitter.com"
-					target="_blank"
-					aria-label="twitter link"
-					class="flex h-14 w-14 items-center justify-center rounded-full bg-primary-base text-lg text-primary-content transition hover:bg-primary-base/80"
-				>
-					<Icon class="!text-2xl" name="twitter" />
-				</a>
-				<a
-					href="https://linkedIn.com"
-					target="_blank"
-					aria-label="linkedIn link"
-					class="flex h-14 w-14 items-center justify-center rounded-full bg-primary-base text-lg text-primary-content transition hover:bg-primary-base/80"
-				>
-					<Icon class="!text-2xl" name="linkedIn" />
-				</a>
-			</div>
+	  </div>
+  
+	  <!-- Contact Details Section -->
+	  <div class="md:w-1/2 mt-8 md:mt-0 md:pl-12">
+		<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Contact Information</h2>
+		<p class="text-gray-600 mb-6">
+		  You can also reach us using the following contact details. We’re available via phone, email, and social media.
+		</p>
+  
+		<ul class="space-y-6">
+		  <li class="flex items-center">
+			<svg
+			  class="w-6 h-6 text-teal-700 mr-3"
+			  fill="currentColor"
+			  viewBox="0 0 20 20"
+			  xmlns="http://www.w3.org/2000/svg"
+			>
+			  <path
+				fill-rule="evenodd"
+				d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.707-4.707a1 1 0 011.414-1.414L8.414 12.586l7.293-7.293a1 1 0 011.414 0z"
+				clip-rule="evenodd"
+			  ></path>
+			</svg>
+			<span class="font-semibold text-gray-800">Phone:</span> +1 (123) 456-7890
+		  </li>
+		  <li class="flex items-center">
+			<svg
+			  class="w-6 h-6 text-teal-700 mr-3"
+			  fill="currentColor"
+			  viewBox="0 0 20 20"
+			  xmlns="http://www.w3.org/2000/svg"
+			>
+			  <path
+				fill-rule="evenodd"
+				d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.707-4.707a1 1 0 011.414-1.414L8.414 12.586l7.293-7.293a1 1 0 011.414 0z"
+				clip-rule="evenodd"
+			  ></path>
+			</svg>
+			<span class="font-semibold text-gray-800">Email:</span> contact@hospital.com
+		  </li>
+		  <li class="flex items-center">
+			<svg
+			  class="w-6 h-6 text-teal-700 mr-3"
+			  fill="currentColor"
+			  viewBox="0 0 20 20"
+			  xmlns="http://www.w3.org/2000/svg"
+			>
+			  <path
+				fill-rule="evenodd"
+				d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.707-4.707a1 1 0 011.414-1.414L8.414 12.586l7.293-7.293a1 1 0 011.414 0z"
+				clip-rule="evenodd"
+			  ></path>
+			</svg>
+			<span class="font-semibold text-gray-800">Address:</span> 123 Main Street, City, Country
+		  </li>
+		</ul>
+  
+		<!-- Google Maps Section -->
+		<div class="mt-8">
+		  <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Location</h3>
+		  <div class="relative w-full h-64">
+			<iframe
+			  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243653.10968235494!2d-73.935242!3d40.730610!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af16b0f27b%3A0x4bc4779ab5cc17db!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1615967912123!5m2!1sen!2sin"
+			  width="100%"
+			  height="100%"
+			  frameborder="0"
+			  style="border:0;"
+			  allowfullscreen=""
+			  aria-hidden="false"
+			  tabindex="0"
+			></iframe>
+		  </div>
 		</div>
-	</Grid>
-</PageSection>
+	  </div>
+	</div>
+  </section>
+  
