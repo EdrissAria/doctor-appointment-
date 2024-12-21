@@ -1,0 +1,167 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import './html.css';
+@import '../node_modules/owls-lib/dist/styles/shadcn/BaseIcon.css';
+
+@layer base {
+	/* DEFAULT THEME */
+	[data-theme="bluish"] {
+		--base-100: 0 0% 96.08%;
+		--base-200: 0 0% 100%;
+		--base-300: 220 13.04% 85.98%;
+		--base-400: 216 5.88% 66.67%;
+		--content: 215 27.91% 16.86%;
+		--muted: 210 11.88% 39.61%;
+		--primary: 201.3 96.3% 32.2%;
+		--primary-base: 198.6 88.7% 48.4%;
+		--primary-content: 0 0% 100%;
+		--primary-hover: 201 90% 27.5%;
+	}
+
+	/* Brownish theme */
+	[data-theme="brownish"] {
+		--base-100: 0 0% 96.08%;
+		--base-200: 0 0% 100%;
+		--base-300: 220 13.04% 85.98%;
+		--base-400: 216 5.88% 66.67%;
+		--content: 215 27.91% 16.86%;
+		--muted: 210 11.88% 39.61%;
+		--primary: 28, 96%, 25%;
+		--primary-base: 28, 94%, 31%;
+		--primary-content: 0 0% 100%;
+		--primary-hover: 28, 90%, 25%;
+	}
+
+	/* DEFAULT DARK */
+	.dark[data-theme="bluish"] {
+		--base-100: 214.74 30.16% 12.35%;
+		--base-200: 215 27.91% 16.86%;
+		--base-300: 216 27.56% 26.9%;
+		--base-400: 214.29 5.36% 37.51%;
+		--content: 0 0% 98%;
+		--muted: 210 6.67% 64.71%;
+		--primary: 202 80.3% 23.9%;
+		--primary-base: 198.6 88.7% 48.4%;
+		--primary-content: 0 0% 100%;
+		--primary-hover: 204 80.2% 19.9%;
+	}
+
+	/* Brownish dark */
+	.dark[data-theme="brownish"] {
+		--base-100: 26 1% 8%;
+		--base-200: 26 1% 11%;
+		--base-300: 26 2% 15%;
+		--base-400: 26 6% 20%;
+		--content: 0 0% 98%;
+		--muted: 27 12% 64.71%;
+		--primary: 28, 96%, 25%;
+		--primary-base: 28, 94%, 31%;
+		--primary-content: 0 0% 100%;
+		--primary-hover: 28, 90%, 25%;
+	}
+
+	:root {
+		--scale: 1;
+		--space-1: calc(4px * var(--scale));
+		--space-2: calc(8px * var(--scale));
+		--space-3: calc(12px * var(--scale));
+		--space-4: calc(16px * var(--scale));
+		--space-5: calc(20px * var(--scale));
+		--space-6: calc(24px * var(--scale));
+		--space-7: calc(28px * var(--scale));
+		--space-8: calc(32px * var(--scale));
+		--space-9: calc(48px * var(--scale));
+		--space-10: calc(64px * var(--scale));
+	}
+}
+
+.dark, :has(.dark) {
+	color-scheme: dark;
+}
+
+@layer components {
+	.lg-button {
+		@apply block rounded-lg bg-primary px-6 py-3 text-base text-primary-content shadow hover:bg-primary-hover focus:outline-none;
+	}
+
+	.base-icon {
+		@apply inline-flex items-center justify-center;
+	}
+
+
+	.html h1 {
+		@apply text-3xl md:text-4xl font-bold mb-4;
+	  }
+	  
+	  .html h2 {
+		@apply text-2xl md:text-3xl font-bold mb-3;
+	  }
+	  
+	  .html h3 {
+		@apply text-xl md:text-2xl font-bold mb-2;
+	  }
+	  
+	  .html h4,.html h5,.html h6 {
+		@apply text-lg md:text-xl font-bold mb-2;
+	  }
+	  
+	  .html p {
+		@apply mb-4 leading-relaxed;
+	  }
+	  
+	  .html a {
+		@apply text-blue-600 underline hover:text-blue-800;
+	  }
+	  
+	  .html ul {
+		@apply list-disc list-inside mb-4;
+	  }
+	  
+	  .html ol {
+		@apply list-decimal list-inside mb-4;
+	  }
+	  
+	  .html li {
+		@apply mb-1;
+	  }
+	  .html li p {
+		@apply contents;
+	  }
+	  
+	  .html blockquote {
+		@apply border-l-4 border-base-300 pl-4 italic text-muted mb-4;
+	  }
+	  
+	  .html img {
+		@apply rounded-lg shadow mb-4;
+		display: block;
+		max-width: 100%;
+		height: auto;
+	  }
+	  
+	  .html pre {
+		@apply bg-base-300 text-primary dark:bg-base-200 dark:text-content p-4 rounded-lg mb-4 overflow-x-auto font-mono;
+	  }
+	  
+	  .html code {
+		@apply bg-base-300 text-primary dark:bg-base-200 dark:text-content px-1 rounded font-mono;
+	  }
+	  
+	  .html table {
+		@apply border-collapse border border-base-300 w-full mb-4 text-sm;
+	  }
+	  
+	  .html th {
+		@apply bg-gray-100 border border-base-300 px-4 py-2 text-left font-medium;
+	  }
+	  
+	  .html td {
+		@apply border border-base-300 px-4 py-2;
+	  }
+	  
+	  .html hr {
+		@apply border-t border-base-300 my-4;
+	  }
+}
