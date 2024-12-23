@@ -1,88 +1,80 @@
-<section class="bg-white py-16">
-	<div class="container mx-auto flex flex-col md:flex-row items-center px-6">
-	  <!-- Image Section -->
-	  <div class="md:w-1/2 flex justify-center">
-		<img
-		  src="/path/to/your/service-image.svg"
-		  alt="Healthcare Services"
-		  class="max-w-full h-auto"
-		/>
+<script lang="ts">
+	export let services = [
+	  {
+		title: 'Expert Doctor',
+		description:
+		  'You will often study doctors, but most doctors have extra expertise in a type of medicine or medicine-based field.',
+		icon: '👩‍⚕️',
+	  },
+	  {
+		title: 'Medicine',
+		description: 'They care for people who are critically ill or injured.',
+		icon: '💊',
+	  },
+	  {
+		title: 'Cardiology',
+		description: 'They’re experts on the heart and blood vessels.',
+		icon: '❤️',
+	  },
+	  {
+		title: 'Neurology',
+		description: 'They use X-rays, ultrasounds, and other imaging tech.',
+		icon: '🧠',
+	  },
+	];
+  </script>
+  
+  <section class="bg-teal-50 py-16">
+	<div class="container mx-auto grid md:grid-cols-2 gap-8 px-6">
+	  <!-- Text Section -->
+	  <div class="space-y-4">
+		<p class="text-teal-700 font-semibold">We provide</p>
+		<h2 class="text-3xl md:text-4xl font-bold">
+		  Here is a little more about <br />
+		  Our Hospital Service
+		</h2>
+		<p class="text-gray-600">
+		  We have several gift shops and hair salons on the hospital’s main campus.
+		</p>
+		<ul class="space-y-3">
+		  {#each services as service (service.title)}
+			<li class="flex items-center text-teal-700 font-medium">
+			  <svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="2"
+				stroke="currentColor"
+				class="w-5 h-5 mr-3"
+			  >
+				<path
+				  stroke-linecap="round"
+				  stroke-linejoin="round"
+				  d="M5 13l4 4L19 7"
+				/>
+			  </svg>
+			  {service.title}
+			</li>
+		  {/each}
+		</ul>
+		<button
+		  class="mt-6 bg-teal-700 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-teal-800 transition"
+		>
+		  All Service
+		</button>
 	  </div>
   
-	  <!-- Text Content -->
-	  <div class="md:w-1/2 mt-8 md:mt-0 md:pl-12">
-		<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
-		<p class="text-gray-600 mb-6">
-		  We provide a range of healthcare services that prioritize your well-being and comfort. Explore our offerings below:
-		</p>
-		<ul class="space-y-4 mb-6">
-		  <li class="flex items-center">
-			<svg
-			  class="w-6 h-6 text-teal-700 mr-3"
-			  fill="currentColor"
-			  viewBox="0 0 20 20"
-			  xmlns="http://www.w3.org/2000/svg"
-			>
-			  <path
-				fill-rule="evenodd"
-				d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.707-4.707a1 1 0 011.414-1.414L8.414 12.586l7.293-7.293a1 1 0 011.414 0z"
-				clip-rule="evenodd"
-			  ></path>
-			</svg>
-			<span class="font-semibold text-gray-800">24/7 Emergency Care</span>
-		  </li>
-		  <li class="flex items-center">
-			<svg
-			  class="w-6 h-6 text-teal-700 mr-3"
-			  fill="currentColor"
-			  viewBox="0 0 20 20"
-			  xmlns="http://www.w3.org/2000/svg"
-			>
-			  <path
-				fill-rule="evenodd"
-				d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.707-4.707a1 1 0 011.414-1.414L8.414 12.586l7.293-7.293a1 1 0 011.414 0z"
-				clip-rule="evenodd"
-			  ></path>
-			</svg>
-			<span class="font-semibold text-gray-800">Comprehensive Checkups</span>
-		  </li>
-		  <li class="flex items-center">
-			<svg
-			  class="w-6 h-6 text-teal-700 mr-3"
-			  fill="currentColor"
-			  viewBox="0 0 20 20"
-			  xmlns="http://www.w3.org/2000/svg"
-			>
-			  <path
-				fill-rule="evenodd"
-				d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.707-4.707a1 1 0 011.414-1.414L8.414 12.586l7.293-7.293a1 1 0 011.414 0z"
-				clip-rule="evenodd"
-			  ></path>
-			</svg>
-			<span class="font-semibold text-gray-800">Specialized Treatments</span>
-		  </li>
-		  <li class="flex items-center">
-			<svg
-			  class="w-6 h-6 text-teal-700 mr-3"
-			  fill="currentColor"
-			  viewBox="0 0 20 20"
-			  xmlns="http://www.w3.org/2000/svg"
-			>
-			  <path
-				fill-rule="evenodd"
-				d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.707-4.707a1 1 0 011.414-1.414L8.414 12.586l7.293-7.293a1 1 0 011.414 0z"
-				clip-rule="evenodd"
-			  ></path>
-			</svg>
-			<span class="font-semibold text-gray-800">Online Consultations</span>
-		  </li>
-		</ul>
-		<a
-		  href="/services"
-		  class="bg-teal-700 text-white py-3 px-6 rounded-lg font-semibold hover:bg-teal-800 transition"
-		>
-		  View All Services
-		</a>
+	  <!-- Cards Section -->
+	  <div class="grid sm:grid-cols-2 gap-6">
+		{#each services as service (service.title)}
+		  <div
+			class="bg-white p-6 shadow-md rounded-lg hover:shadow-lg transition"
+		  >
+			<div class="text-4xl mb-4">{service.icon}</div>
+			<h3 class="text-lg font-semibold mb-2">{service.title}</h3>
+			<p class="text-gray-600">{service.description}</p>
+		  </div>
+		{/each}
 	  </div>
 	</div>
   </section>
